@@ -11,4 +11,11 @@ router.get(
     controller.get
 );
 
+router.post(
+    '/',
+    authMiddleware({}),
+    validationMiddleware(schema.get),
+    controller.post
+);
+
 module.exports = router;
