@@ -1,5 +1,5 @@
 {
-    "name": "Node Boiler plate",
+    "name": "Service Bus Set up",
     "version": "1.0.0",
     "description": "Boilerplate for any nodejs applications",
     "main": "index.js",
@@ -13,15 +13,13 @@
         "start": "node --inspect src/index.js",
         "start:uat": "node --inspect src/index.js",
         "start:dev": "env-cmd -f .env.dev node --inspect src/index.js",
-        "start:local": "env-cmd -f .env nodemon --inspect src/index.js",
-        "test": "env-cmd -f .env.test mocha test/ --timeout 30000000 --recursive --exit",
-        "prepare": "husky install",
-        "test:coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=html npm run test"
+        "start:local": "env-cmd -f .env nodemon --inspect src/index.js"
     },
     "keywords": [],
     "author": "Shanmukhasai",
     "license": "ISC",
     "dependencies": {
+        "@azure/service-bus": "7.9.0",
         "@hapi/boom": "9.1.2",
         "@hapi/joi-date": "2.0.1",
         "axios": "0.21.0",

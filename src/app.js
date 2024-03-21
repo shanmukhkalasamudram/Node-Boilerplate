@@ -9,7 +9,10 @@ const contextService = require('request-context');
 
 const app = express();
 const logger = require('./util/logger/logger.util');
+const { connectBus } = require('./util/event-bus');
 const setupRoutes = require('./modules');
+
+// connectBus();
 
 app.use(contextService.middleware('request'));
 

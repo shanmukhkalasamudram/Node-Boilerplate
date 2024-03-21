@@ -9,5 +9,7 @@ const config = {
         MORGAN_LOG_LEVEL: process.env.MORGAN_LOG_LEVEL || 'combined',
         SILENT_LOGGER: process.env.SILENT_LOGGER || false,
     },
+    CONNECTION_STRING: process.env.CONNECTION_STRING || '123456',
+    QUEUE_NAME:  process.env.QUEUE_NAME || '123456',
 };
 module.exports = config;
